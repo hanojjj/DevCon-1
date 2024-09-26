@@ -14,6 +14,13 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 10f;
     public float jumpHeight = 1.0f;
 
+    //collision check to disable objects
+    public PlatformMovingUp platformOne;
+    public PlatformMovingUp platformTwo;
+    public PlatformMovingUp platformThree;    
+    public PlatformMovingDown platformFour;
+    public PlatformMovingDown platformFive;
+    public PlatformMovingDown platformSix;
 
 
     // Start is called before the first frame update
@@ -42,6 +49,33 @@ public class PlayerMovement : MonoBehaviour
         {
             playerRB.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
         }
+
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Platform Up"))
+        {
+
+            platformOne.enabled = false;
+            platformTwo.enabled = false;
+            platformThree.enabled = false;
+        }        
+        if (collision.gameObject.CompareTag("Platform Down"))
+        {
+
+            platformFour.enabled = false;
+            platformFive.enabled = false;
+            platformSix.enabled = false;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        platformOne.enabled = true;
+        platformTwo.enabled = true;
+        platformThree.enabled = true;
+        platformFour.enabled = true;
+        platformFive.enabled = true;
+        platformSix.enabled = true;
 
     }
 }
