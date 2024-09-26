@@ -24,3 +24,4 @@ public class PlatformMovingDown : MonoBehaviour
         transform.position = new Vector2(transform.position.x, Mathf.PingPong(Time.time *2 - 10f, max - min) + min);
     }
 }
+ 
