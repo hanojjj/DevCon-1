@@ -13,12 +13,12 @@ public class PlatformMovingDown : MonoBehaviour
     void Start()
     {
        min = transform.position.y; 
-       max = transform.position.y + 10;
+       max = transform.position.y +10;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector2(transform.position.x, Mathf.PingPong(Time.time * 2, -10));
+        transform.position = new Vector2(transform.position.x, Mathf.PingPong(Time.time *2 - 10f, max - min) + min);
     }
 }
