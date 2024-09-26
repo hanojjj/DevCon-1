@@ -11,7 +11,9 @@ public class CameraController : MonoBehaviour
     
     void Update()
     {
+        //sets the camera position to the players position
         camerPos = new Vector3(Player.position.x, Player.position.y, -10f);
+        //adds a damp effect to make the camera movement more smooth
         transform.position = Vector3.SmoothDamp(gameObject.transform.position, camerPos, ref velocity, dampTime);
     }
 }

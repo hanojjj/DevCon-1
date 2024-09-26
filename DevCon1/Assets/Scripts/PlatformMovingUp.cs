@@ -12,6 +12,7 @@ public class PlatformMovingUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //the min and max position the platforms can bounce between
         min = transform.position.y;
         max = transform.position.y + 10;
     }
@@ -19,6 +20,7 @@ public class PlatformMovingUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //makes the platform bounce up and down starting with up
         transform.position = new Vector2(transform.position.x, Mathf.PingPong(Time.time * 2, max - min) + min);
     }
 }
