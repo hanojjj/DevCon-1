@@ -2,12 +2,13 @@
 
 ### Desired Game Mechanic
 
-Our desired game mechanic is "Freezeing Platforms" withing a 2D platformer.
+Our desired game mechanic is "**Freezeing Platforms**" withing a 2D platformer.
 
 ### Objective Statement
 
 Playable moving platform level that features freezing of the current platform row the player lands on.
-Add more here!
+
+What happens when players are used to a certain _**speed of gameplay**_ and we add a mechaninc that _**slows them down**_. When the world around them is affected by their movement how will they _**adapt their usual playstyle**_?
 
 ### Design Rationale
 
@@ -56,4 +57,26 @@ public class PlatformMovingDown : MonoBehaviour
 
 ### Resources
 
-TBA
+Character Sprite: https://assetstore.unity.com/packages/2d/characters/cute-2d-girl-wizard-155796
+
+Background: https://assetstore.unity.com/packages/2d/environments/pixel-skies-demo-background-pack-226622
+
+Mathf.PingPong Help: https://docs.unity3d.com/ScriptReference/Mathf.PingPong.html
+
+GDD Example: https://drive.google.com/file/d/17-51Uwxqle3DZVleir6OhDlWA_aerw5g/view
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
