@@ -17,7 +17,10 @@ public class PlayerMovement : MonoBehaviour
     //collision check to disable objects
     public PlatformMovingUp platformOne;
     public PlatformMovingUp platformTwo;
-    public PlatformMovingUp platformThree;    
+    public PlatformMovingUp platformThree;
+    public PlatformMovingUp platformSeven;
+    public PlatformMovingUp platformEight;
+    public PlatformMovingUp platformNine;
     public PlatformMovingDown platformFour;
     public PlatformMovingDown platformFive;
     public PlatformMovingDown platformSix;
@@ -60,6 +63,13 @@ public class PlayerMovement : MonoBehaviour
             platformTwo.enabled = false;
             platformThree.enabled = false;
         }        
+
+        if (collision.gameObject.CompareTag("Platform Up 2"))
+        {
+            platformSeven.enabled = false;
+            platformEight.enabled = false;
+            platformNine.enabled = false;
+        }
         if (collision.gameObject.CompareTag("Platform Down"))
         {
 
@@ -76,6 +86,9 @@ public class PlayerMovement : MonoBehaviour
         platformFour.enabled = true;
         platformFive.enabled = true;
         platformSix.enabled = true;
+        platformSeven.enabled =true;
+        platformEight.enabled = true;
+        platformNine.enabled = true; 
 
     }
 }
