@@ -2,13 +2,13 @@
 
 ### Desired Game Mechanic
 
-Our desired game mechanic is "**Freezeing Platforms**" withing a 2D platformer.
+Our desired game mechanic is "**Freezing Platforms**" within a 2D platformer.
 
 ### Objective Statement
 
 Playable moving platform level that features freezing of the current platform row the player lands on.
 
-What happens when players are used to a certain _**speed of gameplay**_ and we add a mechaninc that _**slows them down**_. When the world around them is affected by their movement how will they _**adapt their usual playstyle**_?
+What happens when players are used to a certain _**speed of gameplay**_ and we add a mechanic that _**slows them down**_. When the world around them is affected by their movement how will they _**adapt their usual playstyle**_?
 
 ### Design Rationale
 
