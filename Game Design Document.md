@@ -2,13 +2,13 @@
 
 ### Desired Game Mechanic
 
-Our desired game mechanic is "**Freezeing Platforms**" withing a 2D platformer.
+Our desired game mechanic is "**Freezing Platforms**" within a 2D platformer.
 
 ### Objective Statement
 
 Playable moving platform level that features freezing of the current platform row the player lands on.
 
-What happens when players are used to a certain _**speed of gameplay**_ and we add a mechaninc that _**slows them down**_. When the world around them is affected by their movement how will they _**adapt their usual playstyle**_?
+What happens when players are used to a certain _**speed of gameplay**_ and we add a mechanic that _**slows them down**_. When the world around them is affected by their movement how will they _**adapt their usual playstyle**_?
 
 ### Design Rationale
 
@@ -28,6 +28,38 @@ It's experimental because most people who play platformers tend to move very fas
 - Player must time their jump correctly 
 - Make it to the other side
 - UI to display controls (depending on time) 
+
+### Main Mechanic (Freezing Platforms)
+This was put on the player movement script.
+```C#
+private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Platform Up"))
+        {
+
+            platformOne.enabled = false;
+            platformTwo.enabled = false;
+            platformThree.enabled = false;
+        }        
+        if (collision.gameObject.CompareTag("Platform Down"))
+        {
+
+            platformFour.enabled = false;
+            platformFive.enabled = false;
+            platformSix.enabled = false;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        platformOne.enabled = true;
+        platformTwo.enabled = true;
+        platformThree.enabled = true;
+        platformFour.enabled = true;
+        platformFive.enabled = true;
+        platformSix.enabled = true;
+
+    }
+```
 
 #### Platform Moving Script (Starting down)
 There is a separate script for platforms that start moving up, although its very similar.
@@ -53,7 +85,6 @@ public class PlatformMovingDown : MonoBehaviour
     }
 }
 ```
-
 
 ### Resources
 
