@@ -29,6 +29,38 @@ It's experimental because most people who play platformers tend to move very fas
 - Make it to the other side
 - UI to display controls (depending on time) 
 
+### Main Mechanic (Freezing Platforms)
+This was put on the player movement script.
+```C#
+private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Platform Up"))
+        {
+
+            platformOne.enabled = false;
+            platformTwo.enabled = false;
+            platformThree.enabled = false;
+        }        
+        if (collision.gameObject.CompareTag("Platform Down"))
+        {
+
+            platformFour.enabled = false;
+            platformFive.enabled = false;
+            platformSix.enabled = false;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        platformOne.enabled = true;
+        platformTwo.enabled = true;
+        platformThree.enabled = true;
+        platformFour.enabled = true;
+        platformFive.enabled = true;
+        platformSix.enabled = true;
+
+    }
+```
+
 #### Platform Moving Script (Starting down)
 There is a separate script for platforms that start moving up, although its very similar.
 ```C#
@@ -53,7 +85,6 @@ public class PlatformMovingDown : MonoBehaviour
     }
 }
 ```
-
 
 ### Resources
 
